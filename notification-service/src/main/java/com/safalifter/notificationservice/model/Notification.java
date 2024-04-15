@@ -1,13 +1,15 @@
 package com.safalifter.notificationservice.model;
 
-import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
 
 @Entity(name = "notifications")
 @Builder
@@ -25,6 +27,6 @@ public class Notification {
     private String offerId;
     private String message;
 
-    @CreationTimestamp
-    private LocalDateTime creationTimestamp;
+//    @CreatedDate
+//    private LocalDateTime creationTimestamp;
 }
